@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="/assets/index.380d7fc7.css">
+</head>
+
+<body>
+  <div class="nav bg-gray-400">
+    <ul class="flex">
+      <li class="font bold mx-4 mt-4 bg-white cursor-pointer font-bold">Home</li>
+      <li class="absolute top-0 right-0"><input type="text" placeholder="Search"></li>
+    </ul>
+
+  </div>
+  <div class="container">
+    <h1 class="text-lg font-bold text-gray-700 mx-80 mb-7">Top 10 Songs
+      <!-- Modal toggle -->
+      <!-- <button class="block  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none absolute top-0 right-0 mt-14 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
+        Add Song
+      </button> -->
+    </h1>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="  text-white bg-gray-700 hover:bg-gray-800  absolute top-0 right-0 mt-14 p-2"
+      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      + Add Song
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade text-slate-800 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-black font-bold" id="exampleModalLabel">Additing a new Song</h5>
+            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="w-full max-w-sm">
+              <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    Song name
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-300"
+                    id="inline-full-name" type="text">
+                </div>
+              </div>
+              <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                    Date Released
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-300"
+                    id="inline-password" type="text">
+                </div>
+              </div>
+
+              <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label for="formFileLg" class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                    Artwork</label>
+                  <div class="md:w-2/3">
+                    <input class="form-control
+                    block
+                    w-full
+                    px-2
+                    py-1
+                    text-sm
+                    font-normal
+                    text-gray-700
+                    bg-white bg-clip-padding
+                    border border-solid border-gray-300
+                    rounded
+                    transition
+                    ease-in-out
+                    m-0
+                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="formFileSm" type="file">
+                
+
+                    </div>
+      
+                
+                </div>
+              </div>
+              
+              <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label for="countries_multiple"  class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-300"
+                    id="inline-full-name" type="text">Artists</label>
+                      <select multiple id="countries_multiple" class="fabg-gray-50 border text-center border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Search</option>
+                        <option value="US">Lewis Cadalpi</option>
+                        <option value="CA">Justib Bieber</option>
+                        <option value="FR">Quavo</option>
+                        <option value="DE">Juice WRLD</option>
+                      </select>
+                </div>
+                </div>
+
+                <div class="btn">
+                  <button type="button" class="  text-white bg-gray-700 hover:bg-gray-800  absolute top-0 right-0 mt-14 p-2"
+      data-bs-toggle="modal2" data-bs-target="#exampleModal">+ Add Artist</button>
+                </div>
+            </form>
+             
+
+            <!-- <input type="text">Song Name -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary bg-red-700 " data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary bg-stone-500">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="">
+
+      <table class="border-collapse border border-slate-400 mx-auto">
+        <thead>
+          <tr class="bg-gray-700">
+            <th class="border border-slate-300 text-white ">Artwork</th>
+            <th class="border border-slate-300 text-white ">Song</th>
+            <th class="border border-slate-300 text-white ">Date of Release</th>
+            <th class="border border-slate-300 text-white ">Artist</th>
+            <th class="border border-slate-300 text-white ">Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-slate-300 w-20 h-48"><img src="data:undefined;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKAAdwMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgQHAAIDAf/EADwQAAIBAwMBBgIIBAUFAQAAAAECAwAEEQUSITEGEyJBUXFhgQcUIzJCkaHBUmKx0RUk4fDxJTNDY3IW/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQQAAgMF/8QAIREAAgIDAQADAAMAAAAAAAAAAAECEQMSITEEIkEFE1H/2gAMAwEAAhEDEQA/ALYuLuG2UmVwMeVLmpait34WfYp6CiF3pMmCyP3nuaDd3iVgy4bPQ0wkipwEMkbsxY8A4FRrBpFkk79gEHJJ8qKbWwc0A1/U47NlRW+1IyfLHpUlOlYYxtki/ukSQjJVh+HBLEew/eui9qkt7dVCksgxtcbc/qaQtQ1Wd/BEpAJ5APU/GhxS4uDiWXavpnAFLvI2a6IsaH6RrTcVltpAR1CMD/aoDds7D6wztuUMc7ehpDkhtYAM5cjp71Cd2kbxM2ByF6LQ3ZNUWrYdrNKvJu5jmMcx4CyDAJonDcxkAFvtPTNU5DIe7YqBuHI8I+Vbf4pd94HM0g8OM+gq6yv9BqXSoLHJ4HrXSRSVIzVW6P2su7WVY53yueCfP3qwdO1eK/jTbjd/DnBrSM0+FHGujboZxZBc9CaImhehH7KQfzUUqMApdpJY7SeaaQZHHHvWVN12INc8qGBXkGsq6YGhioRrVoAv1hFwRw1GPLNcbpQ8Do3QjzrNOgihczFEOB0+NVprt2zahI4OSSD4Tx06U09otet4UezhHezMSpK4O0UmzLlmkk++TknHT2H96zyyT4awjRBkvCmdxd2I6LxXMGZhv7sc9FXLMfnW0zLHl24z0BOS3xJrdIBcR7yN2TxzWJcgypcFsdyyYHOVNcm3L4pOoHC5/tUx7LLFApJ446kVzlt1hU5HPp6VLBRHjk6g9W5+VYrjftYfDmuabmugrenFTVtjIucHjg48qlko17lcgsCR0DY+6fj6Ub0bULiwkRWbMeeG9KH28j2JXvkEkDNtY46Z9an7EtpBG3jtZuY8/gJ8s+hqWHUuHslfpewF1PiwNw+NMg5FUv2f1iTSLyNom3RE8DzPqtWxpOqW+pWqTQSKwI9eR7jyreE9jKcaIfaAFZY2HmKyu+uJvWJsdK9rZeFArEweJWHmKX+117JbWqIJxbxylg82MkALnA9M+vw+NEdKuAY+4Y+IdM0M7cIo0C4ZiBkqu8jOwEgZrN8DH0p25ucyEw+FS3U4JofeXSISSe9k/CpOBn2rTUpHku88BSCVAXHHNQIp7iOXAw4z+IZ96VYwdu4mkk7y4V8+Y6D2FEoldYtzbcAevStopJGwe7YH34ozZ6Rbyxia7kLHGdu7Cj5+dVci8YWBlkkkXKSjb6LyTUOeMyMAM9aK6xBbRA/VYyqj7pDYzXuhafNd3SblaQDxEevpQstr2gVHYkXiFum7aaK2li4ZhtyM8+1McuhdDjaeOccZH+xUS5/yrhGGxwPT0quxf+ugK8y7ZbK7gyreENjGD5Vzj2tZvaSclRmMn+lSdUkWUFgAHK8gfCgsd4QQJMZBxVkzNqjo1y8MynccTxq6/wArjIz88U59i9SnW7JgICMwDxk/cY9CPQH9x8KSrkCREK9UAxjyx1ov2SRxqICuyq8ThseQxkY9iOK1j6ZPwu+2mh1KzHekZBwwPByKylPR5WlSaZDxKwPXjOOaym0uGD9CQvIRc9wkoMo8geRULtbezydnbqDHed6m1QBk/wC8AmlLso5/xSNy7tJuIYE9RVgG0F0NmwE9eTRatFYsorU59l3jacxnbj4ef71yUL9b7wN4WTKn41M7SWptu0l7A+CUdl4/OoFpE00km3O3IGKSlwaj1ha0YzOhcEhTnPlRQXUyD7KxEoPmY2Iz8jXZ7RLK3Rwh5XwjHWoAl1iXa1vMiKG/7SsoJHz6VmujFao720Y1G+Uag5jx1XbgCnzRbW0t4ZHtIhgkAHPp8aVrrS0SyiZ7rvZe6zMwYEK+M8f06fGnHsxsOkxmRcl0BOKrJdNItUQr7W4rdJAYtxB6Hzpcvr7/ABRGElsR1CEqR+pon2g0iS4LywOqkltoYZA44/M0I06y1f6tLJfLAojIESuFR3658S9PLqDUS4SUu0QTp0ixukkZY44ZeaApYpNcMGO1lR+vqB0qyNNjkfEc6HLjg4/rUHXuyJEbT2ZIlHPTrUTKzgJcKo6ADA3qD7EdaJaUI2uEALqhO0lTjgnBH5UGDujFNi7kJ+7x70S0cZv4QuQrsBx5c1rFizRcGl6eHt12gRQjhQKyusMn/TEgQYZQOh4Pr/xWU6LAm10SysrxJrZdm1SCo8zRSUnfleK6Xlv3FwykcHkH1rgzeDg81YBUXbqwe27UyTtu2TgSbscHPB/I1F7NKn151ODgg4q0dW0Ya1Zvb4VrhVLQkjz9PmKrHS43tNclidCpwc7hgjBxg0pljTGcdNWWLbW0VzEpccgcfCtTpkRYnap+QrfTpMRADrRSCIEbm6Ur4OoVtcSO1gHhwD096Ndni0enKvmB0oF2zmKzW+EPdrk5A/FUjQO0ZexFuLX/ADAXpjqffp86n4GujPFFFdIySAH1HpXkWnW8LHbGvP8ALUDSLye6Jle3eJ1z3g6jPwPQ0cgkS4Xcp+GPjUiSSZ4kIPJAJHSuN4wEbhvSpuMChOsvst5T/KatRQpPUnxq7yR8eM/60y9lrNbmXvmU7VIwQPxfl+lBY9OmuWBRCxaQ4YA8kmrV0HQk0rs9ZJJHtuJDuk3cEZrbFHZi2R6ob7BY3tIyDu46nrWUGd5tNk7uN+MZHoa9pvUUbDWrQd7AXQeNeflQT7w44pgjlE0asDkMKB3iC2uWVmwG5WpEh5ZEpexHPwquu2LQ23bmeFomSW4jDIcAK3GTj8qsGA7Jom358Yqr/pjukj7aWs1tzLbwJ3nvknH5YqmXwvjbTGXTZxhWJ4IxTDFKDGB5YyaTtGmSeFkOVJXcueo4pn06VWtSzHlRg80hP06cGqB2pXVrLKySyIoU4OTXWxbSY1jlS7iV0OcZxmh11oVjcXplWEcnlsZLH1NHbTR7SNFHcREY6mMcUFRdV+hCG7s5F+wniOPLdUayuR3rvEwKlvw9Kx9D01yGa0iZh6oBW9pYQWLsLZQsb87AOAfhUYE1+BPvFI4pX7a6lHp+lTTSZIOIwqnkljjj5Zo3I+wfCq87e3Dale22mwqzkNvIU9WPAH9fzq8emU/qrGj6OrBNSSPU/q5htISVgjfku3mx9ug9zTTr7hniiB+74jittHig0bRLaCPhUjG1SMHNDLiYzTtI3U09jhquHPyTc3bCmp2pubOGVBlwAOPMV5UiK8jt7GAyZO4YrKvdFCF2cui8DQNn7PkZ9KlazZ/W7cFR9pH4loVb6tY2ZKQQSEnqa7SdoDjwQfmaFMhBtzJmNdpDbhkHypJ+k3RlTX3vXOVuIQVA67hkEn24p0ve0LW6GQpGp9uTSLrF7Nq169xcclhgD+EDyFY5ppKjXHGwFoN5JAjOXZ9kzKSxyfX96cLTU0MBGfvDyNLWnWGyS5iQ+FmEgyPIjH9RWXVtPZnIBC9aVlTHMfFQ8aXOCM7s5pitjlcZ5HwqqbPW5bUbW5FHLbtbIFH2be9VNUWC2AOfOuL7cfeApO//AE8si4CEE+ZrcXl7dqNpK+poEqgxdXPfSdxDyfM+lDdL7PQ291dXt2ve3Msu+JyTmIAkjHpRDTLMQRb2JLnkk1GTUZ0jYd33u0n3xW2OcIv7GOWMp8iFjLI7bpGJIFc1fc9DItYhmO1iYyfUUQhjyQwbwnmmZfIxxjs3wXl8XKpatEiWR2RV3HC/dHpWV0QADoKyuc/5fGnyLN18CVdYICF2zxtrW5uY7WPc/LfhX1rSa4S3XfIcLigl3ctdzFiuFQgKP1rpZsqgueimPHszjczS3Epdyc+Q9KiFealgcmtdufKua5W7G1FJUe2if5hJPjtb2P8Arijz6d38RR1BBoPbkKwB6Hrim7TnSa1X+JfCaCdujWIj6l2faPJQefFDoNPnEmwfrVmTWyyqcig11p7xv3ka5I9BVwgzS9HZmBmAwD1Bplt7VEwqjgVGspy6bAp3efFFbeIrywxRQWesMJj4UvWh3rJ5Mkrj8mIpkmPT40rwyCO9vYfMXBwPcA1TL4UXp0urKOdll5Vx97HQ+9SLO4e3YRvylZyMitWUNwc+/pS+WCmhrFna+s+oNxkEAjoa9qLprHuzGTnb0NZXKnBxdGrq+ChdmSa4j7w9W6elbSgC8kiHGYlb9TXS5Gb2IeQ5rjfnudZt3P3XQoa7jk5PpzlGjRgQSKwZIxXWRM81oqEmgE8jXmpkurtotmb5o3kgjYCcLyQhONw9cEj5ZqPs2+9SYkWaGWGUBo5EKsp8weDQTpojToY9N1G21K1jubSZZYZBlWWpLhTVEaVrGodjNcuLaMmSGOUrLC54ceTD0OMc1beg9oLHX7TvrCcF1H2kLcPGfiP3HFMShXSkMqfH6GUVUb1yeakbx0FDu8Yt0xUmPOw+poI0bOh5NKGq5t+0JI4WYD81/wCf0p1ji8GT1pN7XvFb3do8kiq7ybEUnlieOKDVoqpdCWcgGtuorlbPvhQ+WK6mli54WZR51leZrKJAbdpiVHqLr6YiinUZZOfy5/vRWSMOuT5VG1CPdaDI4zj5UU+gaIhbcd34W5rwMAaj2Tn6qI2PjiYxnP6V7v6nJ4ogJWc12hYLyzDH9KC3mpfV/s7aPv7j+BTwP/o+VAb+DWbvdJd3gijH/jiGBVlGybUe/SJpab01a35VyI5sHIz5H9vypNt5prWdZ7aR4pUPhdDtI9iKfNMaO60+40K+OTKmI5D1OOR8xikS4hls7qS2uF2yRsVZfQim8L5q/wAFM0aeyGvTvpG1y0AW4FveKOpmTa5HupH9KYLT6WgCPrOijH/quP7rVY4Hlmtl6VpojPeX+ln6t9LTva93o+nGGY8d5csGC+wHU+9IEd3d6tr1vcXt08tw8ynvZDnGDnHwHwofipejLv1mzUecn7Go4pLhNm2i49IkbuAkoIceRqefKgdnc7FIP4eFGcE1y1PWr63skurS1SbMmwx87h8R6+dc3VtnQtUMJHFZSanbWa1cLqumSwFuhU5zWUdJA2R//9k=" alt=""></td>
+            <td class="border border-slate-300 ">Someone you Loved</td>
+            <td class="border border-slate-300 ">21 june 2019</td>
+            <td class="border border-slate-300 ">lewis Capaldi</td>
+            <td class="class border border-slate-300">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-slate-300 ..."><img src="/assets/img3.bf8ec927.jfif" alt=""></td>
+            <td class="border border-slate-300 ...">Circles</td>
+            <td class="border border-slate-300 ...">September 27, 2019</td>
+            <td class="border border-slate-300 ...">Post Malone</td>
+            <td class="class border border-slate-300">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="border border-slate-300 ..."><img src="/assets/img2.2e989fec.jfif" alt=""></td>
+            <td class="border border-slate-300 ...">Intentions</td>
+            <td class="border border-slate-300 ...">January 02,2020</td>
+            <td class="border border-slate-300 ...">Justin Bieber, Quavo</td>
+            <td class="class border border-slate-300">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
